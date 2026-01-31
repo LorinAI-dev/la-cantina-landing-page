@@ -1,20 +1,27 @@
 import { MapPin, Phone, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+
+type DayKey = "sun" | "mon" | "tue" | "wed" | "thu" | "fri" | "sat";
+
+const dayKeys: DayKey[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
 const LocationSection = () => {
-  const openingHours = [
-    { day: "Sunday", hours: "Closed", isOpen: false },
-    { day: "Monday", hours: "17:00 – 23:00", isOpen: true },
-    { day: "Tuesday", hours: "Closed", isOpen: false },
-    { day: "Wednesday", hours: "Closed", isOpen: false },
-    { day: "Thursday", hours: "16:20 – 23:00", isOpen: true },
-    { day: "Friday", hours: "16:20 – 23:00", isOpen: true },
-    { day: "Saturday", hours: "16:00 – 23:00", isOpen: true },
+  const { t } = useTranslation();
+
+  const openingHours: Array<{ dayKey: DayKey; hours: string; isOpen: boolean }> = [
+    { dayKey: "sun", hours: t("location.hours.closed"), isOpen: false },
+    { dayKey: "mon", hours: "17:00 – 23:00", isOpen: true },
+    { dayKey: "tue", hours: t("location.hours.closed"), isOpen: false },
+    { dayKey: "wed", hours: t("location.hours.closed"), isOpen: false },
+    { dayKey: "thu", hours: "16:20 – 23:00", isOpen: true },
+    { dayKey: "fri", hours: "16:20 – 23:00", isOpen: true },
+    { dayKey: "sat", hours: "16:00 – 23:00", isOpen: true }
   ];
 
-  // Get today's day name
-  const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
-  const todayInfo = openingHours.find((h) => h.day === today);
+  const todayIndex = new Date().getDay(); // 0..6 (Sun..Sat)
+  const todayKey = dayKeys[todayIndex];
+  const todayInfo = openingHours.find((h) => h.dayKey === todayKey);
 
   return (
     <section id="location" className="py-20 md:py-32 bg-gradient-warm pattern-dots relative overflow-hidden">
@@ -22,13 +29,13 @@ const LocationSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block text-cactus font-semibold uppercase tracking-widest text-sm mb-4">
-            Visit Us
+            {t("location.kicker")}
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
-            FIND YOUR WAY TO <span className="text-chili">LA CANTINA</span>
+            {t("location.titleA")} <span className="text-chili">LA CANTINA</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            We're located right in the heart of Eindhoven — easy to find, hard to leave.
+            {t("location.body")}
           </p>
         </div>
 
@@ -56,7 +63,7 @@ const LocationSection = () => {
                   <MapPin className="w-6 h-6 text-chili" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{t("location.cards.addressTitle")}</h3>
                   <p className="text-muted-foreground">Vestdijk 39</p>
                   <p className="text-muted-foreground">5611 CA Eindhoven, Netherlands</p>
                   <a
@@ -65,7 +72,7 @@ const LocationSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-chili font-medium mt-2 hover:underline"
                   >
-                    Get directions <ExternalLink className="w-4 h-4" />
+                    {t("actions.getDirections")} <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
               </div>
@@ -78,7 +85,7 @@ const LocationSection = () => {
                   <Phone className="w-6 h-6 text-turquoise" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{t("location.cards.phoneTitle")}</h3>
                   <a
                     href="tel:+31064822477"
                     className="text-muted-foreground hover:text-turquoise transition-colors"
@@ -96,10 +103,12 @@ const LocationSection = () => {
                   <Clock className="w-6 h-6 text-warm-orange" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-foreground mb-1">Opening Hours</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{t("location.cards.hoursTitle")}</h3>
                   {todayInfo && (
                     <p className={`text-sm ${todayInfo.isOpen ? "text-cactus" : "text-chili"}`}>
-                      {todayInfo.isOpen ? `Open today: ${todayInfo.hours}` : "Closed today"}
+                      {todayInfo.isOpen
+                        ? t("location.today.open", { hours: todayInfo.hours })
+                        : t("location.today.closed")}
                     </p>
                   )}
                 </div>
@@ -110,11 +119,11 @@ const LocationSection = () => {
                   <div
                     key={index}
                     className={`flex justify-between text-sm py-1 px-2 rounded ${
-                      item.day === today ? "bg-mango/20 font-medium" : ""
+                      item.dayKey === todayKey ? "bg-mango/20 font-medium" : ""
                     }`}
                   >
                     <span className={item.isOpen ? "text-foreground" : "text-muted-foreground"}>
-                      {item.day}
+                      {t(`location.days.${item.dayKey}`)}
                     </span>
                     <span className={item.isOpen ? "text-cactus" : "text-muted-foreground"}>
                       {item.hours}
@@ -123,6 +132,7 @@ const LocationSection = () => {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </div>

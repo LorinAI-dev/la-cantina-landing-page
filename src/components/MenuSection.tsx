@@ -2,29 +2,32 @@ import { Button } from "@/components/ui/button";
 import { Flame, Leaf, Star } from "lucide-react";
 import tacosImage from "@/assets/tacos.jpg";
 import margaritasImage from "@/assets/margaritas.jpg";
+import { useTranslation } from "react-i18next";
 
 const MenuSection = () => {
+  const { t } = useTranslation();
+
   const menuCategories = [
     {
-      title: "Signature Tacos",
-      description: "Our handcrafted tortillas filled with love",
+      title: t("menu.categories.tacos.title"),
+      description: t("menu.categories.tacos.desc"),
       items: [
-        { name: "Al Pastor", desc: "Marinated pork, pineapple, cilantro, onion", tag: "fan favorite" },
-        { name: "Carnitas", desc: "Slow-cooked pulled pork, salsa verde, onion", tag: null },
-        { name: "Pollo Asado", desc: "Grilled chicken, guacamole, pico de gallo", tag: null },
-        { name: "Veggie Fiesta", desc: "Grilled vegetables, black beans, queso fresco", tag: "vegetarian" },
+        { name: "Al Pastor", desc: t("menu.items.alPastor"), tag: t("menu.tags.fanFavorite") },
+        { name: "Carnitas", desc: t("menu.items.carnitas"), tag: null },
+        { name: "Pollo Asado", desc: t("menu.items.polloAsado"), tag: null },
+        { name: "Veggie Fiesta", desc: t("menu.items.veggieFiesta"), tag: t("menu.tags.vegetarian") },
       ],
       image: tacosImage,
       icon: Flame,
     },
     {
-      title: "Drinks & Cocktails",
-      description: "Refresh, relax, repeat",
+      title: t("menu.categories.drinks.title"),
+      description: t("menu.categories.drinks.desc"),
       items: [
-        { name: "Classic Margarita", desc: "Tequila, lime, triple sec, salt rim", tag: "signature" },
-        { name: "Paloma", desc: "Tequila, grapefruit, lime, soda", tag: null },
-        { name: "Michelada", desc: "Mexican beer, lime, spices, tomato juice", tag: null },
-        { name: "Agua Fresca", desc: "Fresh fruit waters — ask for today's flavor", tag: "non-alcoholic" },
+        { name: "Classic Margarita", desc: t("menu.items.classicMargarita"), tag: t("menu.tags.signature") },
+        { name: "Paloma", desc: t("menu.items.paloma"), tag: null },
+        { name: "Michelada", desc: t("menu.items.michelada"), tag: null },
+        { name: "Agua Fresca", desc: t("menu.items.aguaFresca"), tag: t("menu.tags.nonAlcoholic") },
       ],
       image: margaritasImage,
       icon: Star,
@@ -40,13 +43,13 @@ const MenuSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block text-cactus font-semibold uppercase tracking-widest text-sm mb-4">
-            Our Menu
+            {t("menu.kicker")}
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
-            TASTE THE <span className="text-chili">AUTHENTIC</span> FLAVORS
+            {t("menu.titleA")} <span className="text-chili">{t("menu.titleB")}</span> {t("menu.titleC")}
           </h2>
           <p className="text-lg text-muted-foreground">
-            From our legendary tacos to refreshing margaritas, every dish is crafted with authentic recipes and the freshest ingredients.
+            {t("menu.body")}
           </p>
         </div>
 
@@ -92,14 +95,18 @@ const MenuSection = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <h4 className="font-semibold text-foreground">{item.name}</h4>
                           {item.tag && (
-                            <span className={`text-xs px-2 py-0.5 rounded-full ${
-                              item.tag === "vegetarian" 
-                                ? "bg-cactus/20 text-cactus" 
-                                : item.tag === "fan favorite" || item.tag === "signature"
-                                ? "bg-chili/20 text-chili"
-                                : "bg-turquoise/20 text-turquoise"
-                            }`}>
-                              {item.tag === "vegetarian" && <Leaf className="w-3 h-3 inline mr-1" />}
+                            <span
+                              className={`text-xs px-2 py-0.5 rounded-full ${
+                                item.tag === t("menu.tags.vegetarian")
+                                  ? "bg-cactus/20 text-cactus"
+                                  : item.tag === t("menu.tags.fanFavorite") || item.tag === t("menu.tags.signature")
+                                    ? "bg-chili/20 text-chili"
+                                    : "bg-turquoise/20 text-turquoise"
+                              }`}
+                            >
+                              {item.tag === t("menu.tags.vegetarian") && (
+                                <Leaf className="w-3 h-3 inline mr-1" />
+                              )}
                               {item.tag}
                             </span>
                           )}
@@ -110,6 +117,7 @@ const MenuSection = () => {
                   ))}
                 </div>
               </div>
+
             </div>
           ))}
         </div>
@@ -117,7 +125,7 @@ const MenuSection = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Button variant="fiesta" size="lg">
-            Explore Full Menu
+            {t("actions.exploreFullMenu")}
           </Button>
         </div>
       </div>

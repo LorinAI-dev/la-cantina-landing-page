@@ -1,0 +1,150 @@
+{
+  "language": {
+    "toggleLabel": "Language"
+  },
+  "nav": {
+    "about": "About",
+    "menu": "Menu",
+    "vibes": "Vibes",
+    "gallery": "Gallery",
+    "visit": "Visit"
+  },
+  "actions": {
+    "planVisit": "Plan Your Visit",
+    "viewMenu": "View Menu",
+    "exploreFullMenu": "Explore Full Menu",
+    "followUs": "Follow Us",
+    "getDirections": "Get directions",
+    "followForMore": "Follow us for more colorful moments"
+  },
+  "hero": {
+    "addressShort": "Vestdijk 39, Eindhoven",
+    "headlineTop": "COLOR, FLAVOR",
+    "headlineBottom": "GOOD VIBES",
+    "subheadline": "Authentic Mexican food, vibrant drinks, and a chill tropical atmosphere — right in the heart of Eindhoven.",
+    "badges": {
+      "tacos": "Best tacos in Eindhoven",
+      "music": "Great music",
+      "vibes": "Colorful vibes"
+    }
+  },
+  "about": {
+    "kicker": "About Us",
+    "titleA": "WHERE MEXICAN FLAVOR MEETS",
+    "titleB": "EINDHOVEN ENERGY",
+    "body": "LA CANTINA is more than a restaurant — it's a social hotspot where authentic Mexican cuisine meets Dutch gezelligheid. Known for our bright décor, friendly staff, and seriously good tacos, we've become Eindhoven's favorite spot for colorful evenings and memorable moments.",
+    "features": {
+      "decor": {
+        "title": "Colorful Décor",
+        "desc": "Vibrant walls, papel picado, and warm lighting create the perfect fiesta atmosphere."
+      },
+      "music": {
+        "title": "Great Music",
+        "desc": "From Latin beats to chill vibes, our soundtrack sets the mood for an unforgettable evening."
+      },
+      "social": {
+        "title": "Social Vibes",
+        "desc": "Perfect for drinks with friends, date nights, or spontaneous hangouts in the city center."
+      },
+      "welcome": {
+        "title": "Warm Welcome",
+        "desc": "Our friendly staff makes everyone feel like part of the familia from the first moment."
+      }
+    },
+    "imageAlt": "Friends enjoying LA CANTINA",
+    "badge": "GEZELLIG!"
+  },
+  "menu": {
+    "kicker": "Our Menu",
+    "titleA": "TASTE THE",
+    "titleB": "AUTHENTIC",
+    "titleC": "FLAVORS",
+    "body": "From our legendary tacos to refreshing margaritas, every dish is crafted with authentic recipes and the freshest ingredients.",
+    "categories": {
+      "tacos": {
+        "title": "Signature Tacos",
+        "desc": "Our handcrafted tortillas filled with love"
+      },
+      "drinks": {
+        "title": "Drinks & Cocktails",
+        "desc": "Refresh, relax, repeat"
+      }
+    },
+    "items": {
+      "alPastor": "Marinated pork, pineapple, cilantro, onion",
+      "carnitas": "Slow-cooked pulled pork, salsa verde, onion",
+      "polloAsado": "Grilled chicken, guacamole, pico de gallo",
+      "veggieFiesta": "Grilled vegetables, black beans, queso fresco",
+      "classicMargarita": "Tequila, lime, triple sec, salt rim",
+      "paloma": "Tequila, grapefruit, lime, soda",
+      "michelada": "Mexican beer, lime, spices, tomato juice",
+      "aguaFresca": "Fresh fruit waters — ask for today's flavor"
+    },
+    "tags": {
+      "fanFavorite": "fan favorite",
+      "vegetarian": "vegetarian",
+      "signature": "signature",
+      "nonAlcoholic": "non-alcoholic"
+    }
+  },
+  "vibes": {
+    "kicker": "The Vibes",
+    "title": "WHAT OUR GUESTS SAY",
+    "body": "Don't just take our word for it — hear from the people who make LA CANTINA their favorite hangout.",
+    "reviews": [
+      "What a vibe! My new go-to spot in the city center. The atmosphere is unmatched!",
+      "Best tacos in Eindhoven. The real deal. Authentic flavors that transport you straight to Mexico!",
+      "Colorful décor and lovely music — perfect for nights out with friends!",
+      "Probably the best Mexican food in the Netherlands. Everything was perfect!",
+      "Always gezellig! The staff is super friendly and the margaritas are incredible.",
+      "Super chill environment with amazing food. Can't wait to come back!"
+    ]
+  },
+  "gallery": {
+    "kicker": "Gallery",
+    "titleA": "A PEEK INSIDE",
+    "titleB": "LA CANTINA",
+    "body": "Colors, flavors, and unforgettable moments — experience the vibe before you even walk through our doors.",
+    "alts": {
+      "interior": "LA CANTINA colorful interior",
+      "tacos": "Authentic tacos al pastor",
+      "margaritas": "Refreshing margaritas",
+      "friends": "Friends enjoying the vibes"
+    }
+  },
+  "location": {
+    "kicker": "Visit Us",
+    "titleA": "FIND YOUR WAY TO",
+    "titleB": "LA CANTINA",
+    "body": "We're located right in the heart of Eindhoven — easy to find, hard to leave.",
+    "cards": {
+      "addressTitle": "Address",
+      "phoneTitle": "Phone",
+      "hoursTitle": "Opening Hours"
+    },
+    "today": {
+      "open": "Open today: {{hours}}",
+      "closed": "Closed today"
+    },
+    "hours": {
+      "closed": "Closed"
+    },
+    "days": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    }
+  },
+  "footer": {
+    "brandDesc": "Eindhoven's most colorful Mexican hangout. Authentic tacos, refreshing drinks, and the best vibes in town.",
+    "contactTitle": "Contact",
+    "quickLinksTitle": "Quick Links",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "inCity": "in Eindhoven"
+  }
+}

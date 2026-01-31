@@ -1,37 +1,16 @@
 import { Star, Quote } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ReviewsSection = () => {
+  const { t } = useTranslation();
+
   const reviews = [
-    {
-      text: "What a vibe! My new go-to spot in the city center. The atmosphere is unmatched!",
-      author: "Sophie M.",
-      rating: 5,
-    },
-    {
-      text: "Best tacos in Eindhoven. The real deal. Authentic flavors that transport you straight to Mexico!",
-      author: "Marco V.",
-      rating: 5,
-    },
-    {
-      text: "Colorful décor and lovely music — perfect for nights out with friends!",
-      author: "Lisa K.",
-      rating: 5,
-    },
-    {
-      text: "Probably the best Mexican food in the Netherlands. Everything was perfect!",
-      author: "Thomas B.",
-      rating: 5,
-    },
-    {
-      text: "Always gezellig! The staff is super friendly and the margaritas are incredible.",
-      author: "Anna R.",
-      rating: 5,
-    },
-    {
-      text: "Super chill environment with amazing food. Can't wait to come back!",
-      author: "David L.",
-      rating: 5,
-    },
+    { text: t("vibes.reviews.0"), author: "Sophie M.", rating: 5 },
+    { text: t("vibes.reviews.1"), author: "Marco V.", rating: 5 },
+    { text: t("vibes.reviews.2"), author: "Lisa K.", rating: 5 },
+    { text: t("vibes.reviews.3"), author: "Thomas B.", rating: 5 },
+    { text: t("vibes.reviews.4"), author: "Anna R.", rating: 5 },
+    { text: t("vibes.reviews.5"), author: "David L.", rating: 5 },
   ];
 
   return (
@@ -46,13 +25,13 @@ const ReviewsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block text-mango font-semibold uppercase tracking-widest text-sm mb-4">
-            The Vibes
+            {t("vibes.kicker")}
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
-            WHAT OUR GUESTS SAY
+            {t("vibes.title")}
           </h2>
           <p className="text-lg text-primary-foreground/80">
-            Don't just take our word for it — hear from the people who make LA CANTINA their favorite hangout.
+            {t("vibes.body")}
           </p>
         </div>
 
@@ -63,20 +42,16 @@ const ReviewsSection = () => {
               key={index}
               className="group bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 hover:bg-primary-foreground/15 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Quote Icon */}
               <Quote className="w-8 h-8 text-mango mb-4 opacity-60" />
 
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-mango text-mango" />
                 ))}
               </div>
 
-              {/* Review Text */}
               <p className="text-primary-foreground/90 mb-4 leading-relaxed">"{review.text}"</p>
 
-              {/* Author */}
               <p className="text-mango font-semibold">— {review.author}</p>
             </div>
           ))}

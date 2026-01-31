@@ -2,13 +2,16 @@ import heroImage from "@/assets/hero-cantina.jpg";
 import tacosImage from "@/assets/tacos.jpg";
 import margaritasImage from "@/assets/margaritas.jpg";
 import friendsImage from "@/assets/friends-eating.jpg";
+import { useTranslation } from "react-i18next";
 
 const GallerySection = () => {
+  const { t } = useTranslation();
+
   const images = [
-    { src: heroImage, alt: "LA CANTINA colorful interior", span: "col-span-2 row-span-2" },
-    { src: tacosImage, alt: "Authentic tacos al pastor", span: "col-span-1 row-span-1" },
-    { src: margaritasImage, alt: "Refreshing margaritas", span: "col-span-1 row-span-1" },
-    { src: friendsImage, alt: "Friends enjoying the vibes", span: "col-span-2 row-span-1" },
+    { src: heroImage, alt: t("gallery.alts.interior"), span: "col-span-2 row-span-2" },
+    { src: tacosImage, alt: t("gallery.alts.tacos"), span: "col-span-1 row-span-1" },
+    { src: margaritasImage, alt: t("gallery.alts.margaritas"), span: "col-span-1 row-span-1" },
+    { src: friendsImage, alt: t("gallery.alts.friends"), span: "col-span-2 row-span-1" },
   ];
 
   return (
@@ -17,13 +20,13 @@ const GallerySection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block text-turquoise font-semibold uppercase tracking-widest text-sm mb-4">
-            Gallery
+            {t("gallery.kicker")}
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
-            A PEEK INSIDE <span className="text-chili">LA CANTINA</span>
+            {t("gallery.titleA")} <span className="text-chili">{t("gallery.titleB")}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Colors, flavors, and unforgettable moments — experience the vibe before you even walk through our doors.
+            {t("gallery.body")}
           </p>
         </div>
 
@@ -49,7 +52,7 @@ const GallerySection = () => {
 
         {/* Instagram CTA */}
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Follow us for more colorful moments</p>
+          <p className="text-muted-foreground mb-4">{t("actions.followForMore")}</p>
           <a
             href="https://www.instagram.com/lacantina_xehv/"
             target="_blank"

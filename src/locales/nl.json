@@ -1,0 +1,150 @@
+{
+  "language": {
+    "toggleLabel": "Taal"
+  },
+  "nav": {
+    "about": "Over ons",
+    "menu": "Menu",
+    "vibes": "Sfeer",
+    "gallery": "Galerij",
+    "visit": "Bezoek"
+  },
+  "actions": {
+    "planVisit": "Plan je bezoek",
+    "viewMenu": "Bekijk menu",
+    "exploreFullMenu": "Bekijk volledige menu",
+    "followUs": "Volg ons",
+    "getDirections": "Routebeschrijving",
+    "followForMore": "Volg ons voor meer kleurrijke momenten"
+  },
+  "hero": {
+    "addressShort": "Vestdijk 39, Eindhoven",
+    "headlineTop": "KLEUR, SMAAK",
+    "headlineBottom": "GOEDE VIBES",
+    "subheadline": "Authentiek Mexicaans eten, levendige drankjes en een relaxte tropische sfeer — midden in Eindhoven.",
+    "badges": {
+      "tacos": "Beste tacos van Eindhoven",
+      "music": "Goede muziek",
+      "vibes": "Kleurrijke vibes"
+    }
+  },
+  "about": {
+    "kicker": "Over ons",
+    "titleA": "WAAR MEXICAANSE SMAAK",
+    "titleB": "EINDHOVEN-ENERGIE ONTMOET",
+    "body": "LA CANTINA is meer dan een restaurant — het is een sociale hotspot waar authentieke Mexicaanse keuken en Nederlandse gezelligheid samenkomen. Met onze kleurrijke inrichting, vriendelijke service en écht goede tacos zijn we een favoriet geworden voor levendige avonden en mooie herinneringen.",
+    "features": {
+      "decor": {
+        "title": "Kleurrijke inrichting",
+        "desc": "Vrolijke muren, papel picado en warme verlichting zorgen voor de perfecte fiesta-sfeer."
+      },
+      "music": {
+        "title": "Goede muziek",
+        "desc": "Van Latin beats tot chill vibes: onze soundtrack zet de toon voor een topavond."
+      },
+      "social": {
+        "title": "Gezellige vibes",
+        "desc": "Perfect voor drankjes met vrienden, date nights of spontane hangouts in het centrum."
+      },
+      "welcome": {
+        "title": "Warm welkom",
+        "desc": "Ons team laat je vanaf het eerste moment voelen alsof je bij de familia hoort."
+      }
+    },
+    "imageAlt": "Vrienden die genieten bij LA CANTINA",
+    "badge": "GEZELLIG!"
+  },
+  "menu": {
+    "kicker": "Ons menu",
+    "titleA": "PROEF DE",
+    "titleB": "AUTHENTIEKE",
+    "titleC": "SMAKEN",
+    "body": "Van onze legendarische tacos tot verfrissende margarita’s: elk gerecht wordt gemaakt met authentieke recepten en de meest verse ingrediënten.",
+    "categories": {
+      "tacos": {
+        "title": "Signature Tacos",
+        "desc": "Onze handgemaakte tortilla’s, met liefde gevuld"
+      },
+      "drinks": {
+        "title": "Drankjes & Cocktails",
+        "desc": "Verfris, ontspan, herhaal"
+      }
+    },
+    "items": {
+      "alPastor": "Gemarineerd varkensvlees, ananas, koriander, ui",
+      "carnitas": "Langzaam gegaard pulled pork, salsa verde, ui",
+      "polloAsado": "Gegrilde kip, guacamole, pico de gallo",
+      "veggieFiesta": "Gegrilde groenten, zwarte bonen, queso fresco",
+      "classicMargarita": "Tequila, limoen, triple sec, zout randje",
+      "paloma": "Tequila, grapefruit, limoen, soda",
+      "michelada": "Mexicaans bier, limoen, kruiden, tomatensap",
+      "aguaFresca": "Verse fruitwaters — vraag naar de smaak van vandaag"
+    },
+    "tags": {
+      "fanFavorite": "favoriet",
+      "vegetarian": "vegetarisch",
+      "signature": "signature",
+      "nonAlcoholic": "alcoholvrij"
+    }
+  },
+  "vibes": {
+    "kicker": "De sfeer",
+    "title": "WAT ONZE GASTEN ZEGGEN",
+    "body": "Neem het niet alleen van ons aan — hoor het van de mensen die LA CANTINA hun favoriete plek maken.",
+    "reviews": [
+      "Wat een vibe! Mijn nieuwe favoriete plek in het centrum. De sfeer is echt uniek!",
+      "Beste tacos in Eindhoven. Echt authentiek. Smaken die je zo naar Mexico brengen!",
+      "Kleurrijke inrichting en fijne muziek — perfect voor een avond met vrienden!",
+      "Waarschijnlijk het beste Mexicaanse eten van Nederland. Alles was perfect!",
+      "Altijd gezellig! Super vriendelijk personeel en geweldige margarita’s.",
+      "Heerlijke relaxte sfeer met fantastisch eten. Ik kan niet wachten om terug te komen!"
+    ]
+  },
+  "gallery": {
+    "kicker": "Galerij",
+    "titleA": "EEN KIJKJE IN",
+    "titleB": "LA CANTINA",
+    "body": "Kleuren, smaken en onvergetelijke momenten — proef de vibe nog vóór je binnenstapt.",
+    "alts": {
+      "interior": "Kleurrijk interieur van LA CANTINA",
+      "tacos": "Authentieke tacos al pastor",
+      "margaritas": "Verfrissende margarita’s",
+      "friends": "Vrienden die genieten van de sfeer"
+    }
+  },
+  "location": {
+    "kicker": "Bezoek ons",
+    "titleA": "VIND JE WEG NAAR",
+    "titleB": "LA CANTINA",
+    "body": "Midden in Eindhoven — makkelijk te vinden, moeilijk om weg te gaan.",
+    "cards": {
+      "addressTitle": "Adres",
+      "phoneTitle": "Telefoon",
+      "hoursTitle": "Openingstijden"
+    },
+    "today": {
+      "open": "Vandaag open: {{hours}}",
+      "closed": "Vandaag gesloten"
+    },
+    "hours": {
+      "closed": "Gesloten"
+    },
+    "days": {
+      "sun": "Zondag",
+      "mon": "Maandag",
+      "tue": "Dinsdag",
+      "wed": "Woensdag",
+      "thu": "Donderdag",
+      "fri": "Vrijdag",
+      "sat": "Zaterdag"
+    }
+  },
+  "footer": {
+    "brandDesc": "Eindhovens meest kleurrijke Mexicaanse hangout. Authentieke tacos, verfrissende drankjes en de beste vibes in de stad.",
+    "contactTitle": "Contact",
+    "quickLinksTitle": "Snelle links",
+    "rights": "Alle rechten voorbehouden.",
+    "madeWith": "Gemaakt met",
+    "inCity": "in Eindhoven"
+  }
+}
